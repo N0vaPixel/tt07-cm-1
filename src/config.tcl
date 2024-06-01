@@ -39,8 +39,6 @@ set ::env(VERILOG_FILES_BLACKBOX) "$::env(DESIGN_DIR)/../macros/custom_matrix.v"
 set ::env(EXTRA_LEFS) "$::env(DESIGN_DIR)/../macros/custom_matrix.lef"
 set ::env(EXTRA_GDS_FILES) "$::env(DESIGN_DIR)/../macros/custom_matrix.gds"
 set ::env(MACRO_PLACEMENT_CFG) "$::env(DESIGN_DIR)/macros.cfg"
-#set ::env(FP_PDN_MACRO_HOOKS) "mat0 VPWR VGND VPWR VGND"
-#set ::env(FP_PDN_MACRO_HOOKS) "mat1 VPWR VGND pwr1 gnd1"
 
 # Reduce wasted space arround macro which is quite significant in TT single tile
 set ::env(FP_TAP_HORIZONTAL_HALO) 2

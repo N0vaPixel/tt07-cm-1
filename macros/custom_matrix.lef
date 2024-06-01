@@ -66,14 +66,14 @@ MACRO custom_matrix
     USE POWER ;
     PORT
       LAYER met3 ;
-        RECT 5.290 2.020 6.880 22.550 ;
+        RECT 5.290 1.260 6.880 23.920 ;
     END
   END VPWR
   PIN VGND
     USE GROUND ;
     PORT
       LAYER met3 ;
-        RECT 8.160 2.020 9.750 22.550 ;
+        RECT 8.160 1.250 9.750 23.910 ;
     END
   END VGND
   OBS
