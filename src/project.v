@@ -32,7 +32,7 @@ module tt_um_cm_1 (
   always @(posedge clk) begin
     if (!rst_n)
       out <= 8'd0;
-    else if (uio_in[0]) begin
+    else if (!uio_in[0]) begin
       out <= mat01_out;
     end else 
       out <= mat23_out;
@@ -57,8 +57,5 @@ module tt_um_cm_1 (
     .in(ui_in[7:4]),
     .out(mat23_out[7:4])
   );
-
-
- //assign mat_out[1][7:0] = 8'd0;
 
 endmodule
