@@ -5,7 +5,7 @@
 SIM ?= icarus
 TOPLEVEL_LANG ?= verilog
 SRC_DIR = $(PWD)/../src
-PROJECT_SOURCES = project.v
+PROJECT_SOURCES = project.v custom_matrix_1.v custom_matrix_2.v custom_matrix_3.v custom_matrix_4.v
 
 ifneq ($(GATES),yes)
 
@@ -28,6 +28,10 @@ VERILOG_SOURCES += $(PDK_ROOT)/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_f
 
 # this gets copied in by the GDS action workflow
 VERILOG_SOURCES += $(PWD)/gate_level_netlist.v
+VERILOG_SOURCES += $(PWD)/../src/custom_matrix_1.v
+VERILOG_SOURCES += $(PWD)/../src/custom_matrix_2.v
+VERILOG_SOURCES += $(PWD)/../src/custom_matrix_3.v
+VERILOG_SOURCES += $(PWD)/../src/custom_matrix_4.v
 
 endif
 

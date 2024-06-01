@@ -35,9 +35,21 @@ set ::env(KLAYOUT_DRC_KLAYOUT_GDS) 1
 set ::env(PRIMARY_GDSII_STREAMOUT_TOOL) "klayout"
 
 # Macro integration
-set ::env(VERILOG_FILES_BLACKBOX) "$::env(DESIGN_DIR)/../macros/custom_matrix.v"
-set ::env(EXTRA_LEFS) "$::env(DESIGN_DIR)/../macros/custom_matrix.lef"
-set ::env(EXTRA_GDS_FILES) "$::env(DESIGN_DIR)/../macros/custom_matrix.gds"
+set ::env(VERILOG_FILES_BLACKBOX) "$::env(DESIGN_DIR)/custom_matrix_1.v \
+                            $::env(DESIGN_DIR)/custom_matrix_2.v \
+                            $::env(DESIGN_DIR)/custom_matrix_3.v \
+                            $::env(DESIGN_DIR)/custom_matrix_4.v"
+
+set ::env(EXTRA_LEFS) "$::env(DESIGN_DIR)/../macros/cmatrix1/custom_matrix_1.lef \
+                            $::env(DESIGN_DIR)/../macros/cmatrix2/custom_matrix_2.lef \
+                            $::env(DESIGN_DIR)/../macros/cmatrix3/custom_matrix_3.lef \
+                            $::env(DESIGN_DIR)/../macros/cmatrix4/custom_matrix_4.lef"
+
+set ::env(EXTRA_GDS_FILES) "$::env(DESIGN_DIR)/../macros/cmatrix1/custom_matrix_1.gds \
+                            $::env(DESIGN_DIR)/../macros/cmatrix2/custom_matrix_2.gds \
+                            $::env(DESIGN_DIR)/../macros/cmatrix3/custom_matrix_3.gds \
+                            $::env(DESIGN_DIR)/../macros/cmatrix4/custom_matrix_4.gds"
+
 set ::env(MACRO_PLACEMENT_CFG) "$::env(DESIGN_DIR)/macros.cfg"
 
 # Reduce wasted space arround macro which is quite significant in TT single tile

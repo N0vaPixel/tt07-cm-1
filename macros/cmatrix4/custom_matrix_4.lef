@@ -1,0 +1,104 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO custom_matrix_4
+  CLASS BLOCK ;
+  FOREIGN custom_matrix_4 ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 15.000 BY 25.000 ;
+  PIN in[0]
+    ANTENNAGATEAREA 0.196500 ;
+    PORT
+      LAYER met2 ;
+        RECT 1.470 23.000 1.750 25.000 ;
+    END
+  END in[0]
+  PIN in[1]
+    ANTENNAGATEAREA 0.196500 ;
+    PORT
+      LAYER met2 ;
+        RECT 3.770 23.000 4.050 25.000 ;
+    END
+  END in[1]
+  PIN in[2]
+    ANTENNAGATEAREA 0.196500 ;
+    PORT
+      LAYER met2 ;
+        RECT 10.670 23.000 10.950 25.000 ;
+    END
+  END in[2]
+  PIN in[3]
+    ANTENNAGATEAREA 0.196500 ;
+    PORT
+      LAYER met2 ;
+        RECT 12.970 23.000 13.250 25.000 ;
+    END
+  END in[3]
+  PIN out[0]
+    ANTENNADIFFAREA 0.445500 ;
+    PORT
+      LAYER met2 ;
+        RECT 1.470 0.000 1.750 2.000 ;
+    END
+  END out[0]
+  PIN out[1]
+    PORT
+      LAYER met2 ;
+        RECT 3.770 0.000 4.050 2.000 ;
+    END
+  END out[1]
+  PIN out[2]
+    ANTENNADIFFAREA 0.445500 ;
+    PORT
+      LAYER met2 ;
+        RECT 10.670 0.000 10.950 2.000 ;
+    END
+  END out[2]
+  PIN out[3]
+    ANTENNADIFFAREA 0.445500 ;
+    PORT
+      LAYER met2 ;
+        RECT 12.970 0.000 13.250 2.000 ;
+    END
+  END out[3]
+  PIN VPWR
+    USE POWER ;
+    PORT
+      LAYER met3 ;
+        RECT 5.290 1.260 6.880 23.920 ;
+    END
+  END VPWR
+  PIN VGND
+    USE GROUND ;
+    PORT
+      LAYER met3 ;
+        RECT 8.160 1.250 9.750 23.910 ;
+    END
+  END VGND
+  OBS
+      LAYER nwell ;
+        RECT -0.190 20.345 14.910 21.950 ;
+        RECT 0.000 17.735 14.910 20.345 ;
+        RECT -0.190 14.905 14.910 17.735 ;
+        RECT 0.000 12.295 14.910 14.905 ;
+        RECT -0.190 9.465 14.910 12.295 ;
+        RECT 0.000 6.855 14.910 9.465 ;
+        RECT -0.190 4.025 14.910 6.855 ;
+        RECT 0.000 2.635 14.910 4.025 ;
+      LAYER li1 ;
+        RECT 0.000 2.635 14.720 21.845 ;
+      LAYER met1 ;
+        RECT 0.000 2.480 14.720 22.000 ;
+      LAYER met2 ;
+        RECT 2.030 22.720 3.490 23.000 ;
+        RECT 4.330 22.720 10.390 23.000 ;
+        RECT 11.230 22.720 12.690 23.000 ;
+        RECT 1.480 2.280 13.240 22.720 ;
+        RECT 2.030 2.000 3.490 2.280 ;
+        RECT 4.330 2.000 10.390 2.280 ;
+        RECT 11.230 2.000 12.690 2.280 ;
+  END
+END custom_matrix_4
+END LIBRARY
+

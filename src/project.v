@@ -23,12 +23,11 @@ module tt_um_cm_1 (
   assign uo_out = out;
 
   // All output pins must be assigned. If not used, assign to 0.
-  //assign uo_out  = ui_in + uio_in;  // Example: ou_out is the sum of ui_in and uio_in
   assign uio_out = 0;
   assign uio_oe  = 0;
 
   // List all unused inputs to prevent warnings
-  wire _unused = &{ena, clk, rst_n, uio_in[7:1], 1'b0};
+  wire _unused = &{ena, uio_in[7:1], 1'b0};
 
   always @(posedge clk) begin
     if (!rst_n)
@@ -39,22 +38,22 @@ module tt_um_cm_1 (
       out <= mat23_out;
   end
 
-  custom_matrix mat0 (
+  custom_matrix_1 mat1 (
     .in(ui_in[3:0]),
     .out(mat01_out[3:0])
   );
 
-  custom_matrix mat1 (
+  custom_matrix_2 mat2 (
     .in(ui_in[7:4]),
     .out(mat01_out[7:4])
   );
 
-  custom_matrix mat2 (
+  custom_matrix_3 mat3 (
     .in(ui_in[3:0]),
     .out(mat23_out[3:0])
   );
 
-  custom_matrix mat3 (
+  custom_matrix_4 mat4 (
     .in(ui_in[7:4]),
     .out(mat23_out[7:4])
   );

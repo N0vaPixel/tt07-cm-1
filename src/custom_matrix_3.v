@@ -5,7 +5,7 @@
 
 `default_nettype none
 
-module custom_matrix (
+module custom_matrix_3 (
   `ifdef USE_POWER_PINS
     inout VPWR,
     inout VGND,

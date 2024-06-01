@@ -9,12 +9,12 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
+PoC of custom hardened macro for research purposes.
 
 ## How to test
 
-Explain how to use your project
+Select one of the two set of matrices using the MAT_SEL input. Compare the observated IN --> OUT mapping using the reference model.
 
 ## External hardware
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+Nothing required.
