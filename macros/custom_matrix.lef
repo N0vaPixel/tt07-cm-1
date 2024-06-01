@@ -65,39 +65,15 @@ MACRO custom_matrix
   PIN VPWR
     USE POWER ;
     PORT
-      LAYER met1 ;
-        RECT 0.000 21.520 14.720 22.000 ;
-    END
-    PORT
-      LAYER met1 ;
-        RECT 0.000 16.080 14.720 16.560 ;
-    END
-    PORT
-      LAYER met1 ;
-        RECT 0.000 10.640 14.720 11.120 ;
-    END
-    PORT
-      LAYER met1 ;
-        RECT 0.000 5.200 14.720 5.680 ;
+      LAYER met3 ;
+        RECT 5.290 2.020 6.880 22.550 ;
     END
   END VPWR
   PIN VGND
     USE GROUND ;
     PORT
-      LAYER met1 ;
-        RECT 0.000 18.800 14.720 19.280 ;
-    END
-    PORT
-      LAYER met1 ;
-        RECT 0.000 13.360 14.720 13.840 ;
-    END
-    PORT
-      LAYER met1 ;
-        RECT 0.000 7.920 14.720 8.400 ;
-    END
-    PORT
-      LAYER met1 ;
-        RECT 0.000 2.480 14.720 2.960 ;
+      LAYER met3 ;
+        RECT 8.160 2.020 9.750 22.550 ;
     END
   END VGND
   OBS
@@ -113,10 +89,7 @@ MACRO custom_matrix
       LAYER li1 ;
         RECT 0.000 2.635 14.720 21.845 ;
       LAYER met1 ;
-        RECT 1.450 11.400 13.270 13.080 ;
-        RECT 1.450 8.680 13.270 10.360 ;
-        RECT 1.450 5.960 13.270 7.640 ;
-        RECT 1.450 3.240 13.270 4.920 ;
+        RECT 0.000 2.480 14.720 22.000 ;
       LAYER met2 ;
         RECT 2.030 22.720 3.490 23.000 ;
         RECT 4.330 22.720 10.390 23.000 ;

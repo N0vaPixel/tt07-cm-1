@@ -30,27 +30,34 @@ set ::env(LINTER_INCLUDE_PDK_MODELS) 1
 # https://tinytapeout.com/faq/#how-can-i-map-an-additional-external-clock-to-one-of-the-gpios
 set ::env(CLOCK_PORT) {clk}
 
+set ::env(RUN_KLAYOUT) 1
+set ::env(KLAYOUT_DRC_KLAYOUT_GDS) 1
+set ::env(PRIMARY_GDSII_STREAMOUT_TOOL) "klayout"
+
 # Macro integration
 set ::env(VERILOG_FILES_BLACKBOX) "$::env(DESIGN_DIR)/../macros/custom_matrix.v"
 set ::env(EXTRA_LEFS) "$::env(DESIGN_DIR)/../macros/custom_matrix.lef"
 set ::env(EXTRA_GDS_FILES) "$::env(DESIGN_DIR)/../macros/custom_matrix.gds"
 set ::env(MACRO_PLACEMENT_CFG) "$::env(DESIGN_DIR)/macros.cfg"
+#set ::env(FP_PDN_MACRO_HOOKS) "mat0 VPWR VGND VPWR VGND"
+#set ::env(FP_PDN_MACRO_HOOKS) "mat1 VPWR VGND pwr1 gnd1"
 
 # Reduce wasted space arround macro which is quite significant in TT single tile
 set ::env(FP_TAP_HORIZONTAL_HALO) 2
-set ::env(FP_TAP_VERTICAL_HALO) 1
+set ::env(FP_TAP_VERTICAL_HALO) 2
 
-set ::env(FP_PDN_CFG) "$::env(DESIGN_DIR)/pdn_cfg.tcl"
+#set ::env(FP_PDN_CFG) "$::env(DESIGN_DIR)/pdn_cfg.tcl"
 set ::env(FP_PDN_HORIZONTAL_LAYER) "met3"
-
+set ::env(FP_PDN_HORIZONTAL_HALO) 0
+set ::env(FP_PDN_VERTICAL_HALO) 0
 
 # Matrix macro is already hardened, modified and checked individually. MAGIC_DRC_USE_GDS acts as a second layer of verification.
 #set ::env(RUN_MAGIC_DRC) 1
 #set ::env(MAGIC_DRC_USE_GDS) 1
 # Ensure device level LVS, not blackbox (on macro ?)
-set ::env(MAGIC_EXT_USE_GDS) 1
+#set ::env(MAGIC_EXT_USE_GDS) 1
 # Fix magic DRC during LVS. Prevent creating unique labels for each VPWR & VGND vertical rail in macro.
-set ::env(LVS_CONNECT_BY_LABEL) 1
+#set ::env(LVS_CONNECT_BY_LABEL) 1
 
 
 # Configuration docs: https://openlane.readthedocs.io/en/latest/reference/configuration.html
@@ -65,7 +72,7 @@ source $::env(DESIGN_DIR)/user_config.tcl
 
 # Save some time
 set ::env(RUN_KLAYOUT_XOR) 0
-set ::env(RUN_KLAYOUT_DRC) 0
+set ::env(RUN_KLAYOUT_DRC) 1
 
 # Don't put clock buffers on the outputs
 set ::env(PL_RESIZER_BUFFER_OUTPUT_PORTS) 0

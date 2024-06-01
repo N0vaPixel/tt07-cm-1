@@ -25,21 +25,16 @@ module tt_um_cm_1 (
   wire _unused = &{ena, clk, rst_n, 1'b0};
 
   custom_matrix mat0 (
-`ifdef USE_POWER_PINS
-      .VPWR(VPWR),
-      .VGND(VPWR),
-`endif
     .in(ui_in[3:0]),
     .out(uo_out[3:0])
   );
 
   custom_matrix mat1 (
-`ifdef USE_POWER_PINS
-      .VPWR(VPWR),
-      .VGND(VPWR),
-`endif
     .in(ui_in[7:4]),
     .out(uo_out[7:4])
   );
+
+  //assign uo_out[7:4] = ui_in[7:4];
+  //assign uo_out[3:0] = ui_in[3:0];
 
 endmodule

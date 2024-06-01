@@ -24,8 +24,8 @@ pinout:
   ui[1]: "in_mat_1"
   ui[2]: "in_mat_2"
   ui[3]: "in_mat_3"
-  ui[4]: "in_sel_0"
-  ui[5]: "in_sel_1"
+  ui[4]: ""
+  ui[5]: ""
   ui[6]: ""
   ui[7]: ""
 
