@@ -9,7 +9,7 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-PoC of custom hardened macro for research purposes.
+PoC of custom hardened macro for fab testing and research purposes. It simply expose a set of customized matrices hardened.
 
 ## How to test
 

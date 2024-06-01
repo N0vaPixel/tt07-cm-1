@@ -40,7 +40,7 @@ pinout:
   uo[7]: "out_mat_7"
 
   # Bidirectional pins
-  uio[0]: ""
+  uio[0]: "mat_sel"
   uio[1]: ""
   uio[2]: ""
   uio[3]: ""
